@@ -1,0 +1,48 @@
+:root {
+    --primary: #0a7aca;
+    --bg:#032b47;
+}
+* { /*all selector*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+/*Navbar*/
+    .navbar{
+        display: flex;
+        justify-content: space-between; /*sejajar horizontal*/
+        align-items: center; /*untuk yang vertikal dan penggunaan center spya berpangruh utk semua*/ 
+        padding: 1.4rem 7%; /*relatif dalam 16 pixel (utk atas dan bawah)*/ /*7% untuk kiri dan kanan*/
+        background-color: rgba(7, 32, 76, 0.8);/*digunkan rgba spya bisa ditambahkan nilai trasparant*/
+        border-bottom: 2px solid #111980; 
+        position: fixed;   
+        top: 0; /*spya mentok ke atas*/
+        left: 0; 
+        right: 0;
+        z-index: 9999;/*untuk membuat navbar yang sll ada d atas maka gunakan ini dan tdk ada elemen yang ngalahin urutan tumpukannya*/
+    }
+    .navbar .navbar-logo {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    .navbar .navbar-logo span {
+        color: var(--primary);
+    }
+    .navbar .navbar-nav {
+        color: #fff;
+        display: inline-block; /*membuat margin tanpa margin agar turun tidak turun kebawah*/
+        font-size: 1.2rem;
+        margin: 0 2rem;
+    }
+    .navbar .navbar-nav a:hover {
+        color: var(--primary);
+    }
